@@ -1,0 +1,69 @@
+baseURL = 'https://JhonBOMB.github.io/'
+languageCode = 'zh-cn'
+title = 'My Personal Blog'
+theme = 'hugo-theme-stack'
+
+# Theme i18n support
+defaultContentLanguage = 'zh-cn'
+hasCJKLanguage = true
+
+[pagination]
+    pagerSize = 5
+
+# [permalinks]
+#     posts = "/p/:slug/"
+#     page = "/:slug/"
+
+[params]
+    mainSections = ["posts"]
+    rssFullContent = true
+    favicon = "img/favicon.png" 
+    
+    [params.footer]
+        since = 2025
+
+    [params.sidebar]
+        emoji = "👋"
+        subtitle = "Welcome to my blog"
+        avatar = "img/avatar.png" 
+
+    [params.article]
+        [params.article.license]
+            enabled = true
+            default = "Licensed under CC BY-NC-SA 4.0"
+
+    [params.widgets]
+        homepage = [
+            { type = "search" },
+            { type = "archives", params = { limit = 5 } },
+            { type = "categories", params = { limit = 10 } },
+            { type = "tag-cloud", params = { limit = 10 } },
+        ]
+        page = [{ type = "toc" }]
+
+    [params.comments]
+        enabled = false
+        provider = "disqus"
+
+[[menu.main]]
+    identifier = "home"
+    name = "首页"
+    url = "/"
+    weight = 1
+    [menu.main.params]
+        icon = "home"
+
+[[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 2
+    [menu.main.params]
+        icon = "archives"
+
+[[menu.social]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com"
+    [menu.social.params]
+        icon = "brand-github"
